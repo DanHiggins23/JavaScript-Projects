@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <script>
+        function dropDown(dropDown) {
+            document.getElementById(dropDown).style.visibility = "visible";
+        }
+
+        function dropUp(dropDown) {
+            document.getElementById(dropDown).style.visibility = "hidden";
+        }
+
+        function cricket() {
+            document.getElementById("textBox").innerHTML = "<p><b>CRICKET</b><br>" + "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." + "<br><br><iframe width='660' height='390' src='https://www.youtube.com/embed/76LiIZYyV54?start=12' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe></p>";
+        } 
+
+        function football() {
+            document.getElementById("textBox").innerHTML = "<p><b>FOOTBALL</b><br>" + "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." + "<br><br><iframe width='660' height='390' src='https://www.youtube.com/embed/mIR3mTrjLOI' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe></p>";
+        }
+        
+        function tennis() {
+            document.getElementById("textBox").innerHTML = "<p><b>Tennis</b><br>" + "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." + "<br><br><iframe width='660' height='390' src='https://www.youtube.com/embed/Qm2jfSrrFkk' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe></p>";
+        }
+
+        function shutdown() {
+            document.getElementById("textBox").innerHTML = "<iframe width='560' height='315' src='https://www.youtube.com/embed/pkXipcoCKjE?autoplay=1' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
+        }
+    </script>
+    <body id="body">
+        <div id="nav">
+            <div id="section1" onmouseleave="dropUp('dropDown')">
+                <input id="sports" type="button" value="Sports" onmouseenter="dropDown('dropDown')">
+                <div id="dropDown">
+                    <input type="button" value="Cricket" onclick="cricket()"><br>
+                    <input type="button" value="Footall" onclick="football()"><br>
+                    <input type="button" value="Tennis" onclick="tennis()"><br>
+                </div>
+            </div>
+        
+            <div id="section2" onmouseleave="dropUp('dropDown2')">
+                    <input id="sports" type="button" value="Country" onmouseenter="dropDown('dropDown2')">
+                    <div id="dropDown2">
+                        <input id="france" type="button" value="Shutdown" onclick="shutdown()"><br>
+                        <input id="england" type="button" value="England"><br>
+                        <input id="spain" type="button" value="Spain"><br>
+                    </div>
+            </div>
+        </div>
+
+        <div id="textBox">
+        </div>
+    </body>
+</html>

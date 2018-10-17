@@ -1,0 +1,92 @@
+<html>
+<script>
+    var fullString = "";
+    var secondString = "";
+    var audio = new Audio('shutdown.mp3');
+    function addNum(value) {
+        var userInput = document.getElementById("result").value
+
+        if (userInput == "") {
+            if (value == "*" || value == "-" || value == "+" || value == "%" || value == "=" ) {
+                fullString = "";
+                return;
+            }
+        }
+
+        if (value == "*" || value == "-" || value == "+" || value == "%" || value == "=" ) {
+            if (value == (fullString.charAt((fullString.length - 1)))) {
+                return;
+            }
+        }
+
+        fullString = fullString + value;
+        document.getElementById("result").value = fullString;
+    }
+    function calculate() {
+        var num = document.getElementById("result").value
+
+        if (fullString == "543974") {
+            audio.play();
+
+            var shutdown = "Skepta-Shutdown";
+            var out = ""
+
+            for (var i = 0; i <= shutdown.length; i++) {
+                (function (i) {
+                    setTimeout(function () {
+                        out = out + shutdown.charAt(i);
+                        document.getElementById("result").value = out;
+                    }, 500*i);
+                })(i);
+            };
+            return;
+        }
+        
+        fullString = eval(num)
+        document.getElementById("result").value = fullString;
+    }
+    function clearScreen() {
+        audio.pause();
+        fullString = ""
+        document.getElementById("result").value = "";
+        return;
+    }
+</script>
+<head>
+    <link rel="stylesheet" href="calcstyle.css">
+    <link rel="stylesheet" href="stylesheetfont.css">
+</head>
+<body>
+    <center>
+    <div id="calculatorMain">
+        <div id="row">
+            <input type="text" id="result" readonly class="noPadding">
+        </div>
+        <div id="row1">
+            <input type="button" value="7" onclick="addNum(value)">
+            <input type="button" value="8" onclick="addNum(value)">
+            <input type="button" value="9" onclick="addNum(value)">
+            <input type="button" value="CLR" id="clear" onclick="clearScreen()" class="noPadding">
+        </div>
+        <div id="row2">
+            <input type="button" value="4" onclick="addNum(value)">
+            <input type="button" value="5" onclick="addNum(value)">
+            <input type="button" value="6" onclick="addNum(value)">
+            <input type="button" value="*" onclick="addNum(value)" class="noPadding">
+        </div>
+        <div id="row3">
+            <input type="button" value="1" onclick="addNum(value)">
+            <input type="button" value="2" onclick="addNum(value)">
+            <input type="button" value="3" onclick="addNum(value)">
+            <input type="button" value="-" onclick="addNum(value)" class="noPadding">
+        </div>
+        <div id="row4">
+            <input type="button" value="0" onclick="addNum(value)">
+            <input type="button" value="%" onclick="addNum(value)">
+            <input type="button" value="=" onclick="calculate()">
+            <input type="button" value="+" onclick="addNum(value)" class="noPadding">
+        </div>
+    </div>
+    </center>
+</body>
+</html>

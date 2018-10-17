@@ -1,0 +1,73 @@
+body {
+    margin: auto;
+    background-color: rgb(104, 131, 131);
+}
+
+#nav {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+#section1 input {
+    width: 200px;
+    border: none;
+    height: 50px;
+    background-color: rgb(42, 202, 202);
+    font-size: 14px;
+}
+
+#section1 {
+    float: left;
+    padding-right: 10px;
+}
+
+#section2 input {
+    width: 200px;
+    border: none;
+    height: 50px;
+    background-color: rgb(42, 202, 202);
+    font-size: 14px;
+}
+
+#section2 {
+    float: left;
+}
+
+#dropDown input:hover {
+    background-color: blue;
+}
+
+#dropDown {
+    visibility: hidden;
+}
+
+#dropDown input {
+    background-color: white;
+}
+
+#dropDown2 input {
+    background-color: white;
+}
+
+#dropDown2 input:hover {
+    background-color: blue;
+}
+
+#dropDown2 {
+    visibility: hidden;
+}
+
+#textBox {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 80%;
+    position: absolute;
+}
+
+#textbox p {
+    color: black;
+    width: 660px;
+}
